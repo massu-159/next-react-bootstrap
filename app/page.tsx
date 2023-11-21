@@ -16,8 +16,8 @@ export default function Home() {
           <p>ここにchildrenが入ります</p>
         </Container> */}
 
-        {/* <SetAppContainer></SetAppContainer> */}
         <FormTest></FormTest>
+      <SetAppContainer></SetAppContainer>
 
       </div>
 

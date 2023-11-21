@@ -3,6 +3,7 @@
   height:900px;
   /* 上下中央よせ */
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }

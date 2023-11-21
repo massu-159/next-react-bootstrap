@@ -8,34 +8,23 @@ const SetAppContainer = () => {
 
   return (
     <Link
-      href={"/family/" + "/links/" + "/feature-permissions"}
-      className="border rounded-3 shadow-sm text-decoration-none text-dark cursor-pointer"
+      href={"#"}
+      className="border rounded-3 shadow-sm text-decoration-none text-dark cursor-pointer my-5"
     >
         <Container>
           <Row>
             <Col
-              xs={4}
-              sm={3}
               className="d-flex justify-content-center align-items-center"
             >
               <h2>画像</h2>
             </Col>
             <Col
-              xs={7}
-              sm={8}
-              className="d-flex flex-column justify-content-between"
-            >
-            <h1>iOS / Android</h1>
-            </Col>
-            <Col
-              xs={1}
-              sm={1}
               className="d-flex justify-content-end align-items-center"
             >
                 <div className="d-flex">
                   <OverlayTrigger
                     key="child-application-links-overlay-trigger"
-                    placement={"top"}
+                    placement={"top-end"}
                     overlay={
                       <Tooltip id="child-application-links-tooltip">
                         <div>
