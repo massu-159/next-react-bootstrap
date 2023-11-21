@@ -3,8 +3,14 @@
 import { Col, Container, OverlayTrigger, Row, Tooltip } from "react-bootstrap";
 import Link from "next/link";
 import InfoIcon from '@mui/icons-material/Info';
+import { useState } from "react";
+import { DefaultButton } from "./Button";
 
 const SetAppContainer = () => {
+  const [show, setShow] = useState(true);
+  const onclick = {
+    onClick: () => setShow(!show),
+  };
 
   return (
     <Link
@@ -24,7 +30,8 @@ const SetAppContainer = () => {
                 <div className="d-flex">
                   <OverlayTrigger
                     key="child-application-links-overlay-trigger"
-                    placement={"top-end"}
+                placement={"top-end"}
+                trigger={show ? ["click", "focus"] : []}
                     overlay={
                       <Tooltip id="child-application-links-tooltip">
                         <div>
@@ -32,9 +39,9 @@ const SetAppContainer = () => {
                         </div>
                       </Tooltip>
                     }
-                  >
-                    <InfoIcon></InfoIcon>
-                  </OverlayTrigger>
+                >
+                <InfoIcon></InfoIcon>
+              </OverlayTrigger>
                 </div>
             </Col>
           </Row>
